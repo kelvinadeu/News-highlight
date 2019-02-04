@@ -1,20 +1,11 @@
-import unittest
-from models import news
-News = news.News
-
-class NewsTest(unittest.TestCase):
+class News:
     """
-    Test class to test the behaviour of the Movie class
+    News class to define News Objects
     """
-
-    def setUp(self):
-        """
-        Set up method that will run before every Test
-        """
-        self.new_news = News()
-
-    def test_instance(self):
-        self.assertTrue(instance(self.new_news,News))
-
-if  __name__ == '__main__':
-       unittest.main()        
+    def __init__(self,id,title,overview,poster,vote_average,vote_count):
+        self.id =id
+        self.title = title
+        self.overview = overview
+        self.poster = 'https://image.tmdb.org/t/p/w500/'+ poster
+        self.vote_average = vote_average
+        self.vote_count = vote_count
