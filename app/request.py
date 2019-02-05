@@ -26,4 +26,20 @@ def get_news(category):
             news_results_list = get_news_response['results']
             news_results = process_results(news_results_list)
 
-    return news_results 
+    def process_results(news_list)
+        """
+        Function that processes the news list of articles that contain news details
+
+        Args:
+            news_list:A list of articles that contain news details
+
+        Returns :
+               news_results:A list of article objects
+
+        """
+        news_results = []
+        for news_articles in news_list:
+            id = news_articles.get('id')
+            overview = news_articles.get(overview)
+
+    return news_results
