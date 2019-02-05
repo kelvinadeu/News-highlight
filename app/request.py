@@ -5,10 +5,10 @@ from .models import news
 News = news.News
 
 #Getting api api Key
-Api_key = app.config['NEWS_API_KEY']
+Api_key = app.config['SOURCES_API_KEY']
 
 #Getting the news base url
-base_url = app.config["NEWS_API_BASE_URL"]
+base_url = app.config["SOURCES_API_KEY_API_BASE_URL"]
 
 def get_news(category):
     """
@@ -26,9 +26,9 @@ def get_news(category):
             news_results_list = get_news_response['results']
             news_results = process_results(news_results_list)
 
-    def process_results(news_list)
+    def process_results(news_list):
         """
-        Function that processes the news list of articles that contain news details
+        Function that processes the sourc list of articles that contain news details
 
         Args:
             news_list:A list of articles that contain news details

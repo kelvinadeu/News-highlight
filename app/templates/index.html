@@ -5,10 +5,17 @@
         {% if title %}
         <title> {{}} </title>
         {% else %}
-        <title> Welcome to the best News Review website </title>
+        <title> Home - welcom to the best news highlight website Online </title>
         {% endif %}
     </head>
     <body>
+      <!--Latest news highlights section -->
+      <h3>Latest news highlight</h3>
+      <ul>
+        {% for latest news highlights %}
+          <li>{{latest news_highlight.title}}</li>
+        {%endfor%}  
+      </ul>
 
     </body>
 </html>
