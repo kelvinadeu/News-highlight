@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         {% if title %}
-        <title> {{}} </title>
+        <title> {{title}} </title>
         {% else %}
         <title> Home - welcom to the best news highlight website Online </title>
         {% endif %}
@@ -11,11 +11,12 @@
     <body>
       <!--Latest news highlights section -->
       <h3>Latest news highlight</h3>
-      <ul>
-        {% for latest_news in general %}
-          <li>{{latest_news.name}}</li>
-        {%endfor%}
-      </ul>
+      {% if sources%}
+      <h2>There are sources</h2>
+      {%else%}
+      <h2>No sources</h2>
+      {%endif%}
+      
 
     </body>
 </html>

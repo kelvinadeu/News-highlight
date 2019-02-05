@@ -1,16 +1,16 @@
-class Articles:
-    def __init__(self,id,name,description,url,category):
+class Sources:
+    def __init__(self,id,name,description):
         self.id=id
         self.name=name
         self.description=description
-        self.url=url
-        self.category=category
-        
+        # self.url=url
+        # self.category=category
 
-class Sources:
+
+class Articles:
     def __init__(self,id,name,description,url,category):
-        id = news.get('id')
-        name = news.get(name)
-        description = news.get(description)
-        url = news.get(url)
-        category = news.get(category)
+        self.id = news.get('id')
+        self.name = news.get(name)
+        self.description = news.get(description)
+        self.url = news.get(url)
+        self.category = news.get(category)
