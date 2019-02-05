@@ -1,30 +1,40 @@
-from app import app
 import urllib.request,json
-from .models import news
+from .models import Articles
 
-News = news.News
+# News = news.News
 
 #Getting api api Key
-Api_key = app.config['SOURCES_API_KEY']
+api_key = None
 
 #Getting the news base url
-base_url = app.config["SOURCES_API_KEY_API_BASE_URL"]
+base_url = get_news=None
 
-def get_news(category):
-    """
-    Function that gets the json reponse to our url request
-    """
-    get__news__url = base_url.format(category,Api_key)
+def configure_request(app):
+    global api_key,base_url_source,base_url_articles
+    api_key = app.config['NEWS_API_KEY']
+    base_url_source= 'https://newsapi.org/v2/sources?apikey=0e0837dd5a584abf8479e5f3e49a2e3f'
+def configure_request(app):
+    global api_key,base_url_source,base_url_articles
+    api_key = app.config['NEWS_API_KEY']
+    base_url_source='https://newsapi.org/v2/sources?apikey=0e0837dd5a584abf8479e5f3e49a2e3f'
+    base_url_articles=app.config['ARTICLES_BASE_URL']
+    base_url_articles=app.config['ARTICLES_BASE_URL']
 
-    with urllib.request.urlopen(get_news_url) as url:
-        get_news_data = url.read()
-        get_news_response = json.loads(get_news_data)
+def get_articles(id):
+    get_articles_details_url = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'.format(id,api_key)
+    print(get_articles_details_url)
 
-        news_results = none
+    with urllib.request.urlopen(get_articles_details_url) as url:
+        articles_details_data = url.read()
+        articles_details_response = json.loads(articles_details_data)
 
-        if get_news_response['result']:
-            news_results_list = get_news_response['results']
-            news_results = process_results(news_results_list)
+        articles_object = None
+        if articles_details_response["articles"]:
+            articles_list=articles_details_response['articles']
+            articles_object= process_source_results(articles_list)
+
+    return articles_object
+    news_results = process_results(news_results_list)
 
     def process_results(news_list):
         """
@@ -38,8 +48,11 @@ def get_news(category):
 
         """
         news_results = []
-        for news_articles in news_list:
-            id = news_articles.get('id')
-            overview = news_articles.get(overview)
+        for news in news_list:
+            id = news.get('id')
+            name = news.get(name)
+            description = news.get(description)
+            url = news.get(url)
+            category = news.get(category)
 
     return news_results

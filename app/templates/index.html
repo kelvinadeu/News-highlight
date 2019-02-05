@@ -12,9 +12,9 @@
       <!--Latest news highlights section -->
       <h3>Latest news highlight</h3>
       <ul>
-        {% for latest news highlights %}
-          <li>{{latest news_highlight.title}}</li>
-        {%endfor%}  
+        {% for latest_news in general %}
+          <li>{{latest_news.name}}</li>
+        {%endfor%}
       </ul>
 
     </body>
