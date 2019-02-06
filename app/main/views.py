@@ -14,30 +14,17 @@ def index():
     new_sources=  get_sources('general')
     return render_template('index.html',general = new_sources)
 
-# @main.route('/index')
-# def index():
-#
-#     '''
-#     View source page function that returns the source details
-#     '''
-#
-#     #Getting latest news highlights
-#     latest_news = get_news('general')
-#     print(latest_news)
-#     title = 'Home - welcome to the best news highlight website Online'
-#     return render_template('index.html',title=title,id = source_id, general=latest_news)
-#     # @app.route('/article/')
+ 
+
 @main.route('/articles/<id>')
 def articles(id):
 
     '''
-    View  page function that returns the details page and its data
+    my index page
+    :return:
     '''
-    name="Adeu"
-    articles=get_articles(id)
-    # print(articles)
-    # title=f'{articles.title}'
-    return render_template('articles.html', articles=articles, name=name,name_source=id)
+    new_articles=  get_articles('general')
+    return render_template('index.html',general = new_articles)
 
 # @main.route('/categories/<category_name>')
 # def categories(category_name):
