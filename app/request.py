@@ -74,10 +74,10 @@ def get_articles(category):
         Function that processes the sourc list of articles that contain news details
 
         Args:
-            news_list:A list of articles that contain news details
+            articles_list:A list of articles that contain news details
 
         Returns :
-               news_results:A list of article objects
+               articles_results:A list of article objects
 
         """
         articles_results = []
