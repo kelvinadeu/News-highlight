@@ -1,7 +1,7 @@
 from flask import render_template
 from . import main
-from ..request import get_articles,get_category,get_sources
-from ..models import Articles
+from ..request import get_sources
+from ..models import Sources
 
 
 
@@ -11,9 +11,8 @@ def index():
     my index page
     :return:
     '''
-    sources=  get_articles()
-    print(sources)
-    return render_template('index.html', sources = sources)
+    new_sources=  get_sources('general')
+    return render_template('index.html',general = new_sources)
 
 # @main.route('/index')
 # def index():

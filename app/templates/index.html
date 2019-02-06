@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title> {{title}} </title>
-        {% else %}
-        <title> Home - welcom to the best news highlight website Online </title>
-        {% endif %}
-    </head>
-    <body>
-      <!--Latest news highlights section -->
-      <h3>Latest news highlight</h3>
-      {% if sources%}
-      <h2>There are sources</h2>
-      {%else%}
-      <h2>No sources</h2>
-      {%endif%}
-      
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
 
-    </body>
-</html>
+{% block content %}
+
+<ul>
+  {{macro.displaySourceList(general)}}
+</ul>
+
+{% endblock %}

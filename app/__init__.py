@@ -8,12 +8,16 @@ def create_app(config_name):
     #bootstrap = bootstrap
 
     app = Flask(__name__)
-    # Creating the app configurations
-    #initialising flask extensions
+
+    app.config.from_object(config_options  [config_name])
+
+
     bootstrap.init_app(app)
+
     # Registering the blueprint
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
+    
     # setting config
     from . request import configure_request
     configure_request(app)
