@@ -62,14 +62,14 @@ def get_articles(category):
         articles_details_response = json.loads(articles_details_data)
 
         articles_object = None
-        if articles_details_response["sources"]:
-            articles_list=articles_details_response['sources']
-            articles_object= process_source_results(articles_list)
+        if articles_details_response["articles"]:
+            articles_list=articles_details_response['articles']
+            articles_object= process_article_results(articles_list)
 
     return articles_object
-    news_results = process_results(news_results_list)
+    news_results = process_article_results(articles_results_list)
 
-    def process_results(article_list):
+    def process_article_results(article_list):
         """
         Function that processes the sourc list of articles that contain news details
 
@@ -80,7 +80,7 @@ def get_articles(category):
                news_results:A list of article objects
 
         """
-        news_results = []
+        articles_results = []
         for articles in article_list:
             id = source.get('id')
             name = source.get(name)
