@@ -103,7 +103,7 @@ def get_sources():
     return source_results
 
     def process_results(sources_list):
-    sources_results=[]
+        sources_results=[]
     for source_item in sources_list:
         id=source.get('id')
         name=source.get('name')
