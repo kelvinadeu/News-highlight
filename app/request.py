@@ -90,7 +90,7 @@ def get_articles(category):
 
             articles = Articles(id,name,description,url,category)
     return articles_results
-#
+
 # def get_category(category):
 #     get_category_url = 'https://newsapi.org/v2/everything?q={}&sortBy=relevancy&apiKey=854b811928a24b52a41fb275bc9bb457'.format(category)
 #     with urllib.request.urlopen(get_category_url) as url:
