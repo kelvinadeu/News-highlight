@@ -3,8 +3,8 @@ class Sources:
         self.id=id
         self.name=name
         self.description=description
-        # self.url=url
-        # self.category=category
+        self.url=url
+        self.category=category
 
 
 class Articles:

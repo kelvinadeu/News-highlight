@@ -23,7 +23,9 @@ def process_source_results(sources):
         id = source.get('id')
         name = source.get('name')
         description =source.get('description')
-        sources = Sources(id,name,description)
+        url =source.get('url')
+        category =source.get('category')
+        sources = Sources(id,name,description,url,category)
 
         news_sources.append(sources)
     return news_sources
