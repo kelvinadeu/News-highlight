@@ -1,8 +1,19 @@
 {% macro displaySourceList(source_list) %}
 {% for general in source_list %}
+
 <li>{{general.id}}
   {{general.description}}
   <a href="/articles/{{general.id}}">{{general.id}}</a>
+</li>
+{% endfor %}
+{% endmacro %}
+
+{% macro displayArticlesList(articles_list) %}
+{% for general in articles_list %}
+
+<li>{{articles.id}}
+  {{article.description}}
+  <a href="/articles/{{article.id}}">{{article.id}}</a>
 </li>
 {% endfor %}
 {% endmacro %}
