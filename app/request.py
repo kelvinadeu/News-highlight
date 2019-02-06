@@ -59,12 +59,13 @@ def get_articles(id):
         """
         news_results = []
         for news in news_list:
-            id = news.get('id')
-            name = news.get(name)
-            description = news.get(description)
-            url = news.get(url)
-            category = news.get(category)
+            id = source.get('id')
+            name = source.get(name)
+            description = source.get(description)
+            url = source.get(url)
+            category = source.get(category)
 
+            articles = Articles(id,name,description,url,category)
     return news_results
 
 def get_category(category):
@@ -82,4 +83,37 @@ def get_category(category):
     return get_category_results
 
 def get_sources():
-    pass
+    '''
+    function that returns the json response from url
+    :return:
+    '''
+    get_source_url = base_url_source.format(api_key)
+    with urllib.request.urlopen(get_source_url) as url:
+        get_source_data = url.read()
+        get_source_response = json.loads(get_source_data)
+
+        source_results = None
+
+        if get_source_response['sources']:
+            source_results_list = get_source_response['sources']
+            source_results=process_results(source_results_list)
+
+        # source_results=source_results[0:15]
+
+    return source_results
+
+    def process_results(sources_list):
+    sources_results=[]
+    for source_item in sources_list:
+        id=source.get('id')
+        name=source.get('name')
+        description=source.get('description')
+        url=source.get('url')
+        category=source.get('category')
+
+        if id:
+            source_object = Sources(id,name,description,url,category)
+            sources_results.append(source_object)
+    # print(sources_results)
+
+    return sources_results
