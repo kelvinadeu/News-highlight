@@ -15,7 +15,7 @@ def configure_request(app):
     global api_key,base_url_source,base_url_articles
     api_key = '854b811928a24b52a41fb275bc9bb457'
     base_url_source='https://newsapi.org/v2/sources?category={}&apikey=0e0837dd5a584abf8479e5f3e49a2e3f'
-    base_url_articles='https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
+    base_url_articles='https://newsapi.org/v2/everything?sources={}&apiKey={}'
 
 def get_sources(category):
     '''
@@ -54,7 +54,7 @@ def process_source_result(source_list):
     return source_result
 
 def get_articles(category):
-    get_articles_details_url = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'.format(category,api_key)
+    get_articles_details_url = 'https://newsapi.org/v2/everything?sources={}&apiKey={}'.format(category,api_key)
     print(get_articles_details_url)
 
     with urllib.request.urlopen('https://newsapi.org/v2/sources?cartegory/general?&apiKey=854b811928a24b52a41fb275bc9bb457') as url:
