@@ -14,17 +14,15 @@ def index():
     new_sources=  get_sources('general')
     return render_template('index.html',general = new_sources)
 
- 
-
-@main.route('/articles/<id>')
+@main.route('/articles')
 def articles(id):
 
     '''
     my index page
     :return:
     '''
-    new_articles=  get_articles('general')
-    return render_template('index.html',general = new_articles)
+    new_articles=  get_articles('source')
+    return render_template('index.html',source = new_articles)
 
 # @main.route('/categories/<category_name>')
 # def categories(category_name):
