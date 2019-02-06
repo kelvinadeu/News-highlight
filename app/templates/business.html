@@ -2,14 +2,14 @@
 {% import 'macros.html' as macro %}
 
 {% block content %}
-<div class="continer">
-<ul>
-  {{macro.displaySourceList(business)}}
-</ul>
-</div>
+{% for business in source %}
 
+<li id={{business.id}}>
+  <div class="container">
+    {{ business.description }}
+    <a href="/articles/{{business.id}}"></a>
+  </div>
+</li>
+
+{% endfor %}
 {% endblock %}
-
-.contaier{
-
-}

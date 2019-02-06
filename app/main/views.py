@@ -12,26 +12,42 @@ def index():
     :return:
     '''
     new_sources=  get_sources('general')
-    return render_template('index.html',general = new_sources)
+    return render_template('index.html',general=new_sources)
 
-@main.route('/articles')
-def articles(id):
+@main.route('/business')
+def business():
 
     '''
     my index page
     :return:
     '''
-    new_articles=  get_articles('source')
-    return render_template('index.html',source = new_articles)
+    new_articles=  get_sources('business')
+    return render_template('business.html',source = new_articles)
 
-# @main.route('/categories/<category_name>')
-# def categories(category_name):
-#
-#     '''
-#     View  page function that returns the details page and its data
-#     '''
-#     category="Phoebe"
-#     category=get_category(category_name)
+
+@main.route('/health')
+def health():
+
+    '''
+    my index page
+    :return:
+    '''
+    new_articles=  get_sources('health')
+    return render_template('health.html',source = new_articles)
+
+
+@main.route('/politics')
+def politics():
+
+    '''
+    my index page
+    :return:
+    '''
+    new_articles=  get_sources('politics')
+    return render_template('politics.html',source = new_articles)
+
+
+
 
 
 # ViewsBy=relevancy&apiKey={}'.format(category, api_key)
