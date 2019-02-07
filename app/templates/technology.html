@@ -6,8 +6,12 @@
 
 <li id={{technology.id}}>
   <div class="container">
-    {{ technology.description }}
-    <a href={{technology.url}}>read more</a>
+    <div class="row col-md-12">
+      <div class="col-md-8"  style="margin:auto">
+          {{ technology.description }}
+          <button type="button" name="button"><a href={{technology.url}}>read more</a></button>
+      </div>
+    </div>
   </div>
 </li>
 

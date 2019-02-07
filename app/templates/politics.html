@@ -6,8 +6,12 @@
 
 <li id={{politics.id}}>
   <div class="container">
-    {{ politics.description }}
-    <a href={{politics.url}}>read more</a>
+    <div class="row col-md-12">
+      <div class="col-md-8"  style="margin:auto">
+        {{ politics.description }}
+        <button type="button" name="button"><a href={{politics.url}}>read more</a></button>
+      </div>
+    </div>
   </div>
 </li>
 
