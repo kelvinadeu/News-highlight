@@ -43,8 +43,34 @@ def politics():
     my index page
     :return:
     '''
-    new_articles=  get_sources('politics')
+    new_articles=  get_sources('entertainment')
     return render_template('politics.html',source = new_articles)
+
+@main.route('/sports')
+def sports():
+
+    '''
+    my index page
+    :return:
+    '''
+    new_articles=  get_sources('sports')
+    return render_template('sports.html',source = new_articles)
+
+@main.route('/technology')
+def technology():
+
+    '''
+    my index page
+    :return:
+    '''
+    new_articles=  get_sources('technology')
+    return render_template('technology.html',source = new_articles)
+
+
+
+
+
+
 
 
 
