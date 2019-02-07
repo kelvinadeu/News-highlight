@@ -19,10 +19,10 @@
 #### Click on entertainment to get news headlines then click on read more to get more news
 #### Click on health to get news headlines then click on read more to get more news
 #### Click on sports to get news headlines then click on read more to get more news
-#### Click on technology to 
+#### Click on technology to get news headlines then click on read more to get more news
 
 # Prerequisites
-The user will require git and python3.6+ installed in their machine. To install these two, you can use the following commands
+The user will require git and python3.6 installed in their machine. To install these two, you can use the following commands
 
 # git
 $ sudo apt install git-all
@@ -31,7 +31,7 @@ $ sudo apt install git-all
 $ sudo apt-get install python3.6.
 # Installation
 #### To access this application on your command line, you need to clone it git clone
- https://github.com/kelvinadeu/password-locker.git
+ 
 #### License
 MIT License
 
