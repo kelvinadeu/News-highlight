@@ -11,13 +11,10 @@
 ####  Github
 ####  heroku
 ## BDD
-### 1.When the user enters the application, he/she will be prompted to enter their name and a password that they will use to access private information
+### 1.When the user enters the application, he/she will get news in headlines when click news today
 
-### 2.The user will have a choice of:
-#### (1)Adding an existing password
-#### (2)Generating a new password
-#### (3)Viewing their passwords
-#### (4)Deleting a password
+### 2.to get news that user wants click on the:
+#### Business for business news headlines then click on read more to get more news 
 
 #### 3.Add. When the user chooses the add option, he/she will be prompted to provide the account e.g Twitter, Facebook, the username and the password.
 
