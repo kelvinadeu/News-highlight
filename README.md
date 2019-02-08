@@ -3,17 +3,18 @@
 # developer
 #### kelvin Adeu
 
-## Description
+# Description
 #### This app enables user to read news
+
 # Technologies used
 ####  python3
 ####  terminal
 ####  Github
 ####  heroku
-## BDD
-### 1.When the user enters the application, he/she will get news in headlines when click news today
 
-### 2.to get news that user wants click on the:
+# BDD
+#### 1.When the user enters the application, he/she will get news in headlines when click news toda
+#### 2.to get news that user wants click on the:
 #### Business for business news headlines then click on read more to get more news
 #### Click on politics to get news headlines then click on read more to get more news
 #### Click on entertainment to get news headlines then click on read more to get more news
